@@ -1,0 +1,194 @@
+html {
+  overflow-x: hidden;
+}
+
+html p {
+  margin-bottom: 0px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FBFDFC;
+}
+
+.container-fluid {
+  background-color: #8ABAAE;
+  height: 100px;
+}
+
+.container-navbar {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+
+.logo {
+  width: 270px;
+  height: 70px;
+}
+
+.darkcolor {
+  color: #006a4e;
+}
+
+.container-navbar .search .form-control {
+  margin-left: 50px;
+  border-radius: 5px;
+  width: 400px;
+  height: 44px;
+}
+
+.container-navbar .search .button {
+  height: 44px;
+}
+
+.navbar .nav-item {
+  margin-left: 73px;
+}
+
+.navbar .nav-item a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.section-content {
+  margin-top: 50px;
+}
+
+.section-content .content {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+.section-banner {
+  margin-top: 75px;
+}
+
+.section-card {
+  margin-top: 50px;
+}
+
+.section-card .card {
+  height: 350px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.section-card .card a {
+  margin-top: 30px;
+  text-align: center !important;
+  font-size: 24px;
+  color: #006a4e;
+}
+
+.btn-pusgo {
+  background: #006a4e;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.btn-pusgo p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+.btn-pusgo:hover {
+  background-color: #8abaae, 100%;
+}
+
+.section-pasien {
+  margin-top: 50px;
+}
+
+.section-pasien table {
+  margin-top: 24px;
+}
+
+.section-pasien form {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.section-pasien .datapasien .card {
+  margin-top: 24px;
+}
+
+.section-pasien .detailpasien {
+  margin-top: 50px;
+}
+
+.section-doctor {
+  margin-top: 50px;
+}
+
+.section-doctor .card-content {
+  margin-top: 24px;
+}
+
+.section-doctor .card-content .card {
+  height: 350px;
+}
+
+.section-doctor .card-content a {
+  color: #006a4e;
+  margin-top: 27px;
+  text-align: center !important;
+}
+
+.section-doctor {
+  margin-top: 50px;
+}
+
+.section-doctor table {
+  margin-top: 24px;
+}
+
+.section-doctor form {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.section-doctor .doctor-data .card {
+  margin-top: 24px;
+}
+
+.section-doctor .doctor-det {
+  margin-top: 50px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer .row {
+  margin-top: 50px;
+}
+
+.footer .row h1 {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #000000;
+}
+
+.footer .text-center {
+  margin-top: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
