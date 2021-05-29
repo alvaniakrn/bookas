@@ -13,45 +13,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="container-navbar">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <div class="search">
-                        <ul class="navbar-nav mr-auto">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-pusgo my-2 my-sm-0" type="submit"><i
-                                        class="bi bi-search"></i></button>
-                            </form>
-                        </ul>
-                    </div>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #FFFFFF;">
-                                <p>Pasien</p>
-                            </a>
-                        </li>
-                        <li class="nav-item ml-2">
-                            <a class="nav-link" href="#" style="color: #006a4e;">
-                                <p>Dokter</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            @include('navbar')
         </div>
 
         <!--END Navbar-->
@@ -61,58 +30,14 @@
                 <h1 class="darkcolor">Data Dokter</h1>
                 <div class="card-content">
                     <div class="row">
+                        @foreach ($dataAll as $data)
                         <div class="col-3">
                             <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
+                                <img src="{{ $data->gambar }}" alt="">
+                                <a href="/dokter/{{ $data->idDokter }}" class="doc-name">{{ $data->namaDokter }}</a>
                             </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="img/dokter.png" alt="">
-                                <a href="#" class="doc-name">Dr. Thomas Einst</a>
-                            </div>
-                        </div>
+                        </div> 
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -13,45 +13,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="container-navbar">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <div class="search">
-                        <ul class="navbar-nav mr-auto">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-pusgo my-2 my-sm-0" type="submit"><i
-                                        class="bi bi-search"></i></button>
-                            </form>
-                        </ul>
-                    </div>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #FFFFFF;">
-                                <p>Pasien</p>
-                            </a>
-                        </li>
-                        <li class="nav-item ml-2">
-                            <a class="nav-link" href="#" style="color: #006a4e;">
-                                <p>Dokter</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+           @include('navbar')
         </div>
 
         <!--END Navbar-->
@@ -65,8 +34,9 @@
                             <div class="card">
                                 <div class="content">
                                     <div class="row">
+                                        @foreach ($dokter as $dokter)
                                         <div class="col-3">
-                                            <img src="img/dokter.png" alt="">
+                                            <img src="{{ $dokter->gambar }}" alt="" class="ava-image">
                                         </div>
                                         <div class="col-9">
                                             <form>
@@ -75,15 +45,7 @@
                                                         class="col-sm-2 col-form-label">Nama</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" readonly class="form-control-plaintext"
-                                                            id="staticEmail" value="Alvina Vania">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal
-                                                        Lahir</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" readonly class="form-control-plaintext"
-                                                            id="staticEmail" value="14 Desember 2000">
+                                                            id="staticEmail" value="{{ $dokter->namaDokter }}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -91,19 +53,36 @@
                                                         Telp</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" readonly class="form-control-plaintext"
-                                                            id="staticEmail" value="082111111111">
+                                                            id="staticEmail" value="{{ $dokter->noTelpDokter }}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="staticEmail"
-                                                        class="col-sm-2 col-form-label">Alamat</label>
+                                                        class="col-sm-2 col-form-label">Spesialis</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" readonly class="form-control-plaintext"
-                                                            id="staticEmail" value="Jalan Kebon Sirih">
+                                                            id="staticEmail" value="{{ $dokter->spesialis }}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="staticEmail"
+                                                        class="col-sm-2 col-form-label">Pendidikan</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" readonly class="form-control-plaintext"
+                                                            id="staticEmail" value="{{ $dokter->pendidikan }}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="staticEmail"
+                                                        class="col-sm-2 col-form-label">Jadwal</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" readonly class="form-control-plaintext"
+                                                            id="staticEmail" value="{{ $dokter->jadwal }}">
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -118,70 +97,33 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Pasien_ID</th>
+                                        <th scope="col">ID Kunjungan</th>
+                                        <th scope="col">ID Pasien</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Tgl Kunjung</th>
+                                        <th scope="col">Tgl Kunjungan</th>
                                         <th scope="col">Anemnesa</th>
                                         <th scope="col">Diagnosa</th>
-                                        <th scope="col">Penanganan</th>
+                                        <th scope="col">Tindakan</th>
                                         <th scope="col">Obat</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($kunjungan as $kunjungan)
                                     <tr>
-                                        <th scope="row">P-01</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
+                                        <th scope="row">{{ $kunjungan->idKunjungan }}</th>
+                                        <td><a href="/pasien/{{ $kunjungan->idPasien }}">{{ $kunjungan->idPasien }}</a></td>
+                                        <td>{{ $kunjungan->namaPasien }}</td>
+                                        <td>{{ $kunjungan->tglKunjungan }}</td>
+                                        <td>{{ $kunjungan->anemnesa }}</td>
+                                        <td>{{ $kunjungan->diagnosis }}</td>
+                                        <td>{{ $kunjungan->tindakan }}</td>
+                                        <td>{{ $kunjungan->obat }}</td>
                                     </tr>
+                                    @empty
                                     <tr>
-                                        <th scope="row">P-02</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
+                                        <td colspan="8" class="text-center">Belum memiliki kunjungan!</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">P-03</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">P-04</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">P-05</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">P-06</th>
-                                        <td>Alvina Vania</td>
-                                        <td>14-01-2021</td>
-                                        <td>Demam, batuk, pilek.</td>
-                                        <td>Covid 19</td>
-                                        <td>Pemberian Oksigen</td>
-                                        <td>Imboost force, enervon c</td>
-                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

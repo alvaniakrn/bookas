@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,26 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/home', function () {
     return view('landingpage');
 });
 
-Route::get('/data-pasien', function () {
-    return view('pasien_data');
-});
+Route::get('/data-pasien', [MainController::class, 'dataPasien']);
+Route::get('/pasien/{id}', [MainController::class, 'getSinglePasien']);
 
-Route::get('/detail-pasien', function () {
-    return view('pasien_detail');
-});
+Route::get('/data-dokter', [MainController::class, 'dataDokter']);
+Route::get('/dokter/{id}', [MainController::class, 'getSingleDokter']);
 
-Route::get('/data-dokter', function () {
-    return view('dokter_data');
-});
-
-Route::get('/detail-dokter', function () {
-    return view('dokter_detail');
-});
+Route::post('/cari', [MainController::class, 'search']);

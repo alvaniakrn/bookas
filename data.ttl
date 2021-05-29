@@ -1,0 +1,260 @@
+@prefix data: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbo:<http://dbpedia.org/ontology/> .
+
+data:1 rdf:type dbo:Dokter;
+    data:idDokter "100001";
+    data:namaDokter "dr. Deacon Trujillo";
+    data:noTelpDokter "088807359106";
+    data:spesialis "THT";
+    data:pendidikan "S2 UI Kedokteran";
+    data:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:2 rdf:type dbo:Dokter;
+    data:idDokter "100002";
+    data:namaDokter "dr. Sade Hyde";
+    data:noTelpDokter "088807359105";
+    data:spesialis "Penyakit Dalam";
+    data:pendidikan "S2 Kedokteran Unpad";
+    data:jadwal "Selasa, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:3 rdf:type dbo:Dokter;
+    data:idDokter "100003";
+    data:namaDokter "dr. Derek Ayers";
+    data:noTelpDokter "088807359109";
+    data:spesialis "Kulit dan Kelamin";
+    data:pendidikan "S2 Kedokteran UGM";
+    data:jadwal "Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:4 rdf:type dbo:Dokter;
+    data:idDokter "100004";
+    data:namaDokter "dr. Beatrice Spence";
+    data:noTelpDokter "08454832048";
+    data:spesialis "Gigi";
+    data:pendidikan "S2 Kedokteran UI";
+    data:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:5 rdf:type dbo:Dokter;
+    data:idDokter "100005";
+    data:namaDokter "dr. Kennedy Drake";
+    data:noTelpDokter "087072960108";
+    data:spesialis "Penyakit Dalam";
+    data:pendidikan "S2 Kedokteran Unpad";
+    data:jadwal " Sabtu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:6 rdf:type dbo:Dokter;
+    data:idDokter "100006";
+    data:namaDokter "dr. Donna Duncan";
+    data:noTelpDokter "082582735106";
+    data:spesialis "THT";
+    data:pendidikan " Minggu, 17.00 WIB s.d. 20.00";
+    data:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:7 rdf:type dbo:Dokter;
+    data:idDokter "100007";
+    data:namaDokter "dr. Brittany Crosby";
+    data:noTelpDokter "08668400380";
+    data:spesialis "Penyakit Dalam";
+    data:pendidikan "S2 Kedokteran UB";
+    data:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:8 rdf:type dbo:Dokter;
+    data:idDokter "100008";
+    data:namaDokter "dr. Wade Pierce";
+    data:noTelpDokter "086198001857";
+    data:spesialis "Kulit dan Kelamin";
+    data:pendidikan "S2 Kedokteran UI";
+    data:jadwal "Selasa, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:9 rdf:type dbo:Dokter;
+    data:idDokter "100009";
+    data:namaDokter "dr. Chelsea Shaw";
+    data:noTelpDokter "085814570042";
+    data:spesialis "Penyakit Dalam";
+    data:pendidikan "S2 Kedokteran Unpad";
+    data:jadwal "Rabu, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:10 rdf:type dbo:Dokter;
+    data:idDokter "100010";
+    data:namaDokter "dr. Kylan Brown";
+    data:noTelpDokter "081798196426";
+    data:spesialis "Gigi";
+    data:pendidikan "S2 Kedokteran UGM";
+    data:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+    data:gambar "https://assets.indozone.id/content/2020/06/03/3esavVM/t_5ed725d938fac_700.jpg";
+    .
+
+data:11 rdf:type dbo:Pasien;
+    data:idPasien "100051";
+    data:namaPasien "Diana Rios";
+    data:tglLahirPasien "Feb 19, 2000";
+    data:noTelpPasien "083842754680";
+    data:alamatPasien "Jl. Kemanggisan";
+    .
+
+data:12 rdf:type dbo:Pasien;
+    data:idPasien "100052";
+    data:namaPasien "Bryar Dickerson";
+    data:tglLahirPasien "Feb 19, 2000";
+    data:noTelpPasien "083842754680";
+    data:alamatPasien " Jl. Soekarno Hatta";
+    .
+
+data:13 rdf:type dbo:Pasien;
+    data:idPasien "100053";
+    data:namaPasien "Paula Prince";
+    data:tglLahirPasien "Aug 9, 1991";
+    data:noTelpPasien "081405269413";
+    data:alamatPasien " Jl. Rambutan";
+    .
+
+data:14 rdf:type dbo:Pasien;
+    data:idPasien "100054";
+    data:namaPasien "Wade Reyes";
+    data:tglLahirPasien "Mar 18, 2000";
+    data:noTelpPasien "088610291644";
+    data:alamatPasien " Jl. Imam Bonjol";
+    .
+
+data:15 rdf:type dbo:Pasien;
+    data:idPasien "100055";
+    data:namaPasien "Prescott Garrett";
+    data:tglLahirPasien "Jul 8, 1993";
+    data:noTelpPasien "086746908485";
+    data:alamatPasien " Jl. Mardinata";
+    .
+
+data:16 rdf:type dbo:Pasien;
+    data:idPasien "100056";
+    data:namaPasien "Ezekiel Morris";
+    data:tglLahirPasien "Mar 2, 1999";
+    data:noTelpPasien "088450160885";
+    data:alamatPasien "Jl. Kemanggisan";
+    .
+
+data:17 rdf:type dbo:Pasien;
+    data:idPasien "100057";
+    data:namaPasien "Zahir Silva";
+    data:tglLahirPasien "Feb 21, 1994";
+    data:noTelpPasien "080547534892";
+    data:alamatPasien " Jl. Soekarno Hatta";
+    .
+
+data:18 rdf:type dbo:Pasien;
+    data:idPasien "100058";
+    data:namaPasien "Hasad Roth";
+    data:tglLahirPasien "Sep 29, 1998";
+    data:noTelpPasien"080490402975";
+    data:alamatPasien "  Jl. Rambutan";
+    .
+
+data:19 rdf:type dbo:Pasien;
+    data:idPasien "100059";
+    data:namaPasien "Ivan Stout";
+    data:tglLahirPasien "Nov 24, 1999";
+    data:noTelpPasien"083212164043";
+    data:alamatPasien " Jl. Imam Bonjol";
+    .
+
+data:20 rdf:type dbo:Pasien;
+    data:idPasien "100060";
+    data:namaPasien "Ishmael Andrews";
+    data:tglLahirPasien "Nov 7, 1994";
+    data:noTelpPasien "084731696086";
+    data:alamatPasien " Jl. Mardinata";
+    .
+
+data:21 rdf:type dbo:Kunjungan;
+    data:idKunjungan "100091";
+    data:idDokter "100001";
+    data:namaDokter "dr. Deacon Trujillo";
+    data:idPasien "100060";
+    data:namaPasien "Ishmael Andrews";
+    data:tglKunjungan "Nov 12, 2020";
+    data:anemnesa "Telinga sakit, pendengaran kurang";
+    data:diagnosis "Radang telinga";
+    data:tindakan "-";
+    data:obat "Tarivid Ofloxacin";
+    .
+
+data:22 rdf:type dbo:Kunjungan;
+    data:idKunjungan "100092";
+    data:idDokter "100001";
+    data:namaDokter "dr. Deacon Trujillo";
+    data:idPasien "100059";
+    data:namaPasien "Ivan Stout";
+    data:tglKunjungan "May 8, 2020";
+    data:anemnesa "Susah menalan, tenggorokan perih";
+    data:diagnosis "Radang tenggorokan";
+    data:tindakan "-";
+    data:obat "Methylprednisol";
+    .
+
+data:23 rdf:type dbo:Kunjungan;
+    data:idKunjungan "100093";
+    data:idDokter "100004";
+    data:namaDokter "dr. Beatrice Spence";
+    data:idPasien "100058";
+    data:namaPasien "Hasad Roth";
+    data:tglKunjungan "Feb 8, 2020";
+    data:anemnesa "Bengkak pada rahang, susah makan";
+    data:diagnosis "Pembengkakan gusi";
+    data:tindakan "-";
+    data:obat "Cataflam";
+    .
+
+data:24 rdf:type dbo:Kunjungan;
+    data:idKunjungan "100094";
+    data:idDokter "100004";
+    data:namaDokter "dr. Beatrice Spence";
+    data:idPasien "100057";
+    data:namaPasien "Zahir Silva";
+    data:tglKunjungan "Jan 13, 2020";
+    data:anemnesa "Susah membuka mulut, pembengkakan gusi";
+    data:diagnosis "Pertumbuhan gigi bungsu";
+    data:tindakan "Operasi";
+    data:obat "Cataflam";
+    .
+
+PREFIX data:<http://example.com/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX dbo:<http://dbpedia.org/ontology/>
+
+SELECT ?idKunjungan ?idDokter ?namaDokter ?idPasien ?namaPasien ?tglKunjungan ?anemnesa ?diagnosis ?tindakan ?obat
+WHERE{
+    ?subKunjungan rdf:type dbo:Kunjungan .
+    OPTIONAL {?subKunjungan data:idKunjungan ?idKunjungan. }
+    OPTIONAL {?subKunjungan data:idDokter ?idDokter. }
+    OPTIONAL {?subKunjungan data:namaDokter ?namaDokter .}
+    OPTIONAL {?subKunjungan data:idPasien ?idPasien. }
+    OPTIONAL {?subKunjungan data:namaPasien ?namaPasien .}
+    OPTIONAL {?subKunjungan data:tglKunjungan ?tglKunjungan .}
+    OPTIONAL {?subKunjungan data:anemnesa ?anemnesa .}
+    OPTIONAL {?subKunjungan data:diagnosis ?diagnosis .}
+    OPTIONAL {?subKunjungan data:tindakan ?tindakan.}
+    OPTIONAL {?subKunjungan data:obat?obat.}
+    FILTER regex (?idKunjungan, "100094", "i")
+    FILTER regex (?tglKunjungan, "100094", "i")
+    FILTER regex (?anemnesa, "100094", "i")
+    FILTER regex (?diagnosis, "100094", "i")
+    FILTER regex (?tindakan, "100094", "i")
+    FILTER regex (?obat, "100094", "i")
+}
