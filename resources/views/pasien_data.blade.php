@@ -20,38 +20,7 @@
 <body>
     <div class="container-fluid">
         <div class="container-navbar">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <div class="search">
-                        <ul class="navbar-nav mr-auto">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-pusgo my-2 my-sm-0" type="submit"><i
-                                        class="bi bi-search"></i></button>
-                            </form>
-                        </ul>
-                    </div>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #006a4e;">
-                                <p>Pasien</p>
-                            </a>
-                        </li>
-                        <li class="nav-item ml-2">
-                            <a class="nav-link" href="#" style="color: #ffffff;">
-                                <p>Dokter</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            @include('navbar')
         </div>
 
         <!--END Navbar-->
@@ -61,69 +30,6 @@
                 <h1 class="darkcolor">Data Pasien</h1>
                 <div class="row">
                     <div class="col-12">
-                        <!-- <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Pasien_ID</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Tanggal Lahir</th>
-                                    <th scope="col">No. Telp</th>
-                                    <th scope="col">Alamat</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">P-01</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><button type="button" class="btn btn-primary">See More</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-02</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                </tr>
-                            </tbody>
-                        </table> -->
                         <table class="table">
                             <thead>
                                 <tr>
@@ -136,62 +42,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($dataAll as $data)
                                 <tr>
-                                    <th scope="row">P-01</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
+                                    <th scope="row">{{ $data->idPasien }}</th>
+                                    <td>{{ $data->namaPasien }}</td>
+                                    <td>{{ $data->tglLahirPasien }}</td>
+                                    <td>{{ $data->noTelpPasien }}</td>
+                                    <td>{{ $data->alamatPasien }}</td>
+                                    <td><a href="/pasien/{{ $data->idPasien }}">See More</a></td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">P-02</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P-03</th>
-                                    <td>Alvina Vania</td>
-                                    <td>14 Desember 2000</td>
-                                    <td>082111111111</td>
-                                    <td>Jalan Kebon Sirih</td>
-                                    <td><a href="#">See More</a></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

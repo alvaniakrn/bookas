@@ -20,38 +20,7 @@
 <body>
     <div class="container-fluid">
         <div class="container-navbar">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <div class="search">
-                        <ul class="navbar-nav mr-auto">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-pusgo my-2 my-sm-0" type="submit"><i
-                                        class="bi bi-search"></i></button>
-                            </form>
-                        </ul>
-                    </div>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <p style="color: #006a4e;">Pasien</p>
-                            </a>
-                        </li>
-                        <li class="nav-item ml-2">
-                            <a class="nav-link" href="#">
-                                <p style="color: #006a4e;">Dokter</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            @include("navbar")
         </div>
 
         <div class="section-content">
@@ -78,14 +47,14 @@
                     <div class="col-3">
                         <div class="card">
                             <img src="img/pasien.png" alt="">
-                            <a href="#">PASIEN</a>
+                            <a href="{{ url('/data-pasien') }}">PASIEN</a>
                         </div>
                     </div>
                     <div class="col-2"></div>
                     <div class="col-3">
                         <div class="card">
                             <img src="img/dokter.png" alt="">
-                            <a href="#">DOKTER</a>
+                            <a href="{{ url('/data-dokter') }}">DOKTER</a>
                         </div>
                     </div>
                 </div>
