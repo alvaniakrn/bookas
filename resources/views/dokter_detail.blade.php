@@ -111,7 +111,7 @@
                                     @forelse ($kunjungan as $kunjungan)
                                     <tr>
                                         <th scope="row">{{ $kunjungan->idKunjungan }}</th>
-                                        <td><a href="pasien/{{ $kunjungan->idPasien }}">{{ $kunjungan->idPasien }}</a></td>
+                                        <td><a href="/pasien/{{ $kunjungan->idPasien }}">{{ $kunjungan->idPasien }}</a></td>
                                         <td>{{ $kunjungan->namaPasien }}</td>
                                         <td>{{ $kunjungan->tglKunjungan }}</td>
                                         <td>{{ $kunjungan->anemnesa }}</td>
