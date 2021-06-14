@@ -47,14 +47,45 @@
                     <div class="col-3">
                         <div class="card">
                             <img src="img/pasien.png" alt="">
-                            <a href="{{ url('/data-pasien') }}">PASIEN</a>
+                            <a href="{{ url('/data-pasien') }}">DATA PASIEN</a>
                         </div>
                     </div>
                     <div class="col-2"></div>
                     <div class="col-3">
                         <div class="card">
                             <img src="img/dokter.png" alt="">
-                            <a href="{{ url('/data-dokter') }}">DOKTER</a>
+                            <a href="{{ url('/data-dokter') }}">DATA DOKTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-content">
+            <div class="container-navbar">
+                <h1 class="darkcolor">Pencarian Spesifik</h1>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="container-navbar">
+                <div class="row justify-content-center">
+                    <div class="col-3 mr-5 ml-5 mb-5">
+                        <div class="card">
+                            <img src="img/pasien.png" alt="">
+                            <a href="{{ url('/cari-pasien') }}">Cari Pasien</a>
+                        </div>
+                    </div>
+                    <div class="col-3 mr-5 ml-5 mb-5">
+                        <div class="card">
+                            <img src="img/dokter.png" alt="">
+                            <a href="{{ url('/cari-dokter') }}">Cari Dokter</a>
+                        </div>
+                    </div>
+                    <div class="col-3 mr-5 ml-5 mb-5">
+                        <div class="card">
+                            <img src="img/konsul.jpeg" alt="" style="height:258px; width:258px;">
+                            <a href="{{ url('/cari-kunjungan') }}">Cari Kunjungan</a>
                         </div>
                     </div>
                 </div>

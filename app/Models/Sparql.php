@@ -37,24 +37,25 @@ class Sparql extends Model
         }
 
         $result = $sparql->query(
-            "PREFIX data:<http://example.com/>
-            PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-            PREFIX dbo:<http://dbpedia.org/ontology/>
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
             
             SELECT ?idDokter ?namaDokter ?noTelpDokter ?spesialis ?pendidikan ?jadwal ?gambar 
             WHERE{
-                ?subDokter rdf:type dbo:Dokter .
-                OPTIONAL {?subDokter data:idDokter ?idDokter . }
-                OPTIONAL {?subDokter data:namaDokter ?namaDokter .}
-                OPTIONAL {?subDokter data:noTelpDokter ?noTelpDokter .}
-                OPTIONAL {?subDokter data:spesialis ?spesialis .}
-                OPTIONAL {?subDokter data:pendidikan ?pendidikan .}
-                OPTIONAL {?subDokter data:jadwal ?jadwal.}
-                OPTIONAL {?subDokter data:gambar ?gambar .}
+                OPTIONAL {?person ab:idDokter ?idDokter .}
+                OPTIONAL {?person ab:namaDokter ?namaDokter .}
+                OPTIONAL {?person ab:noTelpDokter ?noTelpDokter .}
+                OPTIONAL {?person ab:spesialis ?spesialis .}
+                OPTIONAL {?person ab:pendidikan ?pendidikan .}
+                OPTIONAL {?person ab:jadwal ?jadwal. }
+                OPTIONAL {?person ab:gambar ?gambar .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='dokter')
                 FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
                 FILTER regex (?namaDokter, \"{$namaDokter}\", \"i\")
                 FILTER regex (?spesialis, \"{$spesialis}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idDokter)"
         );
         return $result;
     }
@@ -80,21 +81,22 @@ class Sparql extends Model
         }
 
         $result = $sparql->query(
-            "PREFIX data:<http://example.com/>
-            PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-            PREFIX dbo:<http://dbpedia.org/ontology/>
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
             
-            SELECT ?idPasien ?namaPasien ?tglLahirPasien ?noTelpPasien ?alamatPasien
+            SELECT ?idPasien ?namaPasien ?tglLahirPasien ?noTelpPasien ?alamatPasien 
             WHERE{
-                ?subPasien rdf:type dbo:Pasien.
-                OPTIONAL {?subPasien data:idPasien ?idPasien . }
-                OPTIONAL {?subPasien data:namaPasien ?namaPasien .}
-                OPTIONAL {?subPasien data:tglLahirPasien ?tglLahirPasien .}
-                OPTIONAL {?subPasien data:noTelpPasien ?noTelpPasien .}
-                OPTIONAL {?subPasien data:alamatPasien ?alamatPasien .}
+                OPTIONAL {?person ab:idPasien ?idPasien.}
+                OPTIONAL {?person ab:namaPasien ?namaPasien .}
+                OPTIONAL {?person ab:tglLahirPasien ?tglLahirPasien .}
+                OPTIONAL {?person ab:noTelpPasien ?noTelpPasien .}
+                OPTIONAL {?person ab:alamatPasien ?alamatPasien .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='pasien')
                 FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
                 FILTER regex (?namaPasien, \"{$namaPasien}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idPasien)"
         );
         return $result;
     }
@@ -144,32 +146,114 @@ class Sparql extends Model
         }
 
         $result = $sparql->query(
-            "PREFIX data:<http://example.com/>
-            PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-            PREFIX dbo:<http://dbpedia.org/ontology/>
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
             
-            SELECT ?idKunjungan ?idDokter ?namaDokter ?idPasien ?namaPasien ?tglKunjungan ?anemnesa ?diagnosis ?tindakan ?obat
+            SELECT DISTINCT ?idKunjungan ?idDokter ?namaDokter ?idPasien ?namaPasien ?tglKunjungan ?anemnesa ?diagnosis ?tindakan ?obat
+            WHERE {
+              OPTIONAL {?kunjungan ab:idKunjungan ?idKunjungan .}
+              OPTIONAL {?kunjungan ab:tglKunjungan ?tglKunjungan .}
+              OPTIONAL {?kunjungan ab:anemnesa ?anemnesa .}
+              OPTIONAL {?kunjungan ab:diagnosis ?diagnosis .}
+              OPTIONAL {?kunjungan ab:tindakan ?tindakan .}
+              OPTIONAL {?kunjungan ab:obat ?obat .} 
+              ?kunjungan ab:KunjunganDokter ?kd .
+              ?kunjungan ab:KunjunganPasien ?kp .
+              OPTIONAL {?kd ab:idDokter ?idDokter .}
+              OPTIONAL {?kd ab:namaDokter ?namaDokter .}
+              OPTIONAL {?kp ab:idPasien ?idPasien.}
+              OPTIONAL {?kp ab:namaPasien ?namaPasien .}
+              FILTER regex (?idKunjungan, \"{$idKunjungan}\", \"i\")
+              FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
+              FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
+              FILTER regex (?tglKunjungan, \"{$tglKunjungan}\", \"i\")
+              FILTER regex (?anemnesa, \"{$anemnesa}\", \"i\")
+              FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
+              FILTER regex (?tindakan, \"{$tindakan}\", \"i\")
+              FILTER regex (?obat, \"{$obat}\", \"i\")
+            }
+            ORDER BY ASC(?idKunjungan)"
+        );
+        return $result;
+    }
+
+    function searchDokter ($idDokter, $namaDokter, $spesialis)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT ?idDokter ?namaDokter ?spesialis ?gambar
             WHERE{
-                ?subKunjungan rdf:type dbo:Kunjungan .
-                OPTIONAL {?subKunjungan data:idKunjungan ?idKunjungan. }
-                OPTIONAL {?subKunjungan data:idDokter ?idDokter. }
-                OPTIONAL {?subKunjungan data:namaDokter ?namaDokter .}
-                OPTIONAL {?subKunjungan data:idPasien ?idPasien. }
-                OPTIONAL {?subKunjungan data:namaPasien ?namaPasien .}
-                OPTIONAL {?subKunjungan data:tglKunjungan ?tglKunjungan .}
-                OPTIONAL {?subKunjungan data:anemnesa ?anemnesa .}
-                OPTIONAL {?subKunjungan data:diagnosis ?diagnosis .}
-                OPTIONAL {?subKunjungan data:tindakan ?tindakan.}
-                OPTIONAL {?subKunjungan data:obat?obat.}
-                FILTER regex (?idKunjungan, \"{$idKunjungan}\", \"i\")
+                OPTIONAL {?person ab:idDokter ?idDokter .}
+                OPTIONAL {?person ab:namaDokter ?namaDokter .}
+                OPTIONAL {?person ab:spesialis ?spesialis .}
+                OPTIONAL {?person ab:gambar ?gambar .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='dokter')
                 FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
+                FILTER regex (?namaDokter, \"{$namaDokter}\", \"i\")
+                FILTER regex (?spesialis, \"{$spesialis}\", \"i\")
+            }
+            ORDER BY ASC(?idDokter)"
+        );
+        return $result;
+    }
+
+    function searchPasien($idPasien, $namaPasien, $tglLahirPasien)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT ?idPasien ?namaPasien ?tglLahirPasien ?noTelpPasien ?alamatPasien 
+            WHERE{
+                OPTIONAL {?person ab:idPasien ?idPasien.}
+                OPTIONAL {?person ab:namaPasien ?namaPasien .}
+                OPTIONAL {?person ab:tglLahirPasien ?tglLahirPasien .}
+                OPTIONAL {?person ab:noTelpPasien ?noTelpPasien .}
+                OPTIONAL {?person ab:alamatPasien ?alamatPasien .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='pasien')
                 FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
-                FILTER regex (?tglKunjungan, \"{$tglKunjungan}\", \"i\")
-                FILTER regex (?anemnesa, \"{$anemnesa}\", \"i\")
-                FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
-                FILTER regex (?tindakan, \"{$tindakan}\", \"i\")
-                FILTER regex (?obat, \"{$obat}\", \"i\")
-            }"
+                FILTER regex (?namaPasien, \"{$namaPasien}\", \"i\")
+            }
+            ORDER BY ASC(?idPasien)"
+        );
+        return $result;
+    }
+
+    function searchKunjungan ($idKunjungan, $tglKunjungan, $diagnosis)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT DISTINCT ?idKunjungan ?idDokter ?namaDokter ?idPasien ?namaPasien ?tglKunjungan ?anemnesa ?diagnosis ?tindakan ?obat
+            WHERE {
+              OPTIONAL {?kunjungan ab:idKunjungan ?idKunjungan .}
+              OPTIONAL {?kunjungan ab:tglKunjungan ?tglKunjungan .}
+              OPTIONAL {?kunjungan ab:anemnesa ?anemnesa .}
+              OPTIONAL {?kunjungan ab:diagnosis ?diagnosis .}
+              OPTIONAL {?kunjungan ab:tindakan ?tindakan .}
+              OPTIONAL {?kunjungan ab:obat ?obat .} 
+              ?kunjungan ab:KunjunganDokter ?kd .
+              ?kunjungan ab:KunjunganPasien ?kp .
+              OPTIONAL {?kd ab:idDokter ?idDokter .}
+              OPTIONAL {?kd ab:namaDokter ?namaDokter .}
+              OPTIONAL {?kp ab:idPasien ?idPasien.}
+              OPTIONAL {?kp ab:namaPasien ?namaPasien .}
+              FILTER regex (?idKunjungan, \"{$idKunjungan}\", \"i\")
+              FILTER regex (?tglKunjungan, \"{$tglKunjungan}\", \"i\")
+              FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
+            }
+            ORDER BY ASC(?idKunjungan)"
         );
         return $result;
     }

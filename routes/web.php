@@ -24,5 +24,11 @@ Route::get('/pasien/{id}', [MainController::class, 'getSinglePasien']);
 
 Route::get('/data-dokter', [MainController::class, 'dataDokter']);
 Route::get('/dokter/{id}', [MainController::class, 'getSingleDokter']);
+Route::get('/cari-dokter', [MainController::class, 'searchDokter']);
+Route::get('/cari-pasien', [MainController::class, 'searchPasien']);
+Route::get('/cari-kunjungan', [MainController::class, 'searchKunjungan']);
 
+Route::post('/cari-dokter', [MainController::class, 'hasilSearchDokter']);
+Route::post('/cari-pasien', [MainController::class, 'hasilSearchPasien']);
+Route::post('/cari-kunjungan', [MainController::class, 'hasilSearchKunjungan']);
 Route::post('/cari', [MainController::class, 'search']);
