@@ -7,8 +7,7 @@ use App\Models\Sparql;
 
 class DataController extends Controller
 {
-    function search($value)
-    {
+    function search($value){
         $sparql = new Sparql();
 
         $IdDokter = $sparql->getDokter('idDokter', $value);
@@ -24,6 +23,24 @@ class DataController extends Controller
         $Obat = $sparql->getKunjungan('obat', $value);
         
         return compact("IdDokter", "NamaDokter", "Spesialis", "IdPasien", "NamaPasien", "IdKunjungan", "TanggalKunjungan", "Anemnesa", "Diagnosis", "Tindakan", "Obat");
+    }
+
+    function cariDokter($idDokter, $namaDokter, $spesialis){
+        $sparql = new Sparql();
+        $data = $sparql->searchDokter($idDokter, $namaDokter, $spesialis);
+        return $data;
+    }
+
+    function cariPasien($idPasien, $namaPasien, $tglLahirPasien){
+        $sparql = new Sparql();
+        $data = $sparql->searchPasien($idPasien, $namaPasien, $tglLahirPasien);
+        return $data;
+    }
+
+    function cariKunjungan($idKunjungan, $tglKunjungan, $diagnosis){
+        $sparql = new Sparql();
+        $data = $sparql->searchKunjungan($idKunjungan, $tglKunjungan, $diagnosis);
+        return $data;
     }
 
     function getAllDokter(){

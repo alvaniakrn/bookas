@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Data Dokter</title>
+    <title>Cari Pasien</title>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,20 +27,29 @@
 
         <div class="section-doctor">
             <div class="container-navbar">
-                <h1 class="darkcolor">Data Dokter</h1>
-                <div class="card-content">
-                    <div class="row">
-                        @foreach ($dataAll as $data)
-                        <?php dd($data) ?>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="{{ $data->gambar }}" alt="">
-                                <a href="/dokter/{{ $data->idDokter }}" class="doc-name">{{ $data->namaDokter }}</a>
-                            </div>
-                        </div> 
-                        @endforeach
+                <h1>Pencarian Pasien Lanjut</h1>
+                <form method="POST" action="/cari-pasien">
+                    @csrf
+                    <div class="form-group row">
+                      <label for="idPasien" class="col-sm-2 col-form-label">ID Pasien</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="idPasien" class="form-control" id="idPasien" placeholder="ID Pasien">
+                      </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                      <label for="namaPasien" class="col-sm-2 col-form-label">Nama Pasien</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="namaPasien" class="form-control" id="namaPasien" placeholder="Nama Pasien">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="tglLahirPasien" class="col-sm-2 col-form-label">tglLahirPasien</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="tglLahirPasien" class="form-control" id="tglLahirPasien" placeholder="MMM DD, YYYY">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                </form>
             </div>
         </div>
     </div>

@@ -173,4 +173,82 @@ class Sparql extends Model
         );
         return $result;
     }
+
+    function searchDokter ($idDokter, $namaDokter, $spesialis)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT ?idDokter ?namaDokter ?spesialis ?gambar
+            WHERE{
+                OPTIONAL {?person ab:idDokter ?idDokter .}
+                OPTIONAL {?person ab:namaDokter ?namaDokter .}
+                OPTIONAL {?person ab:spesialis ?spesialis .}
+                OPTIONAL {?person ab:gambar ?gambar .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='dokter')
+                FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
+                FILTER regex (?namaDokter, \"{$namaDokter}\", \"i\")
+                FILTER regex (?spesialis, \"{$spesialis}\", \"i\")
+            }"
+        );
+        return $result;
+    }
+
+    function searchPasien($idPasien, $namaPasien, $tglLahirPasien)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT ?idPasien ?namaPasien ?tglLahirPasien ?noTelpPasien ?alamatPasien 
+            WHERE{
+                OPTIONAL {?person ab:idPasien ?idPasien.}
+                OPTIONAL {?person ab:namaPasien ?namaPasien .}
+                OPTIONAL {?person ab:tglLahirPasien ?tglLahirPasien .}
+                OPTIONAL {?person ab:noTelpPasien ?noTelpPasien .}
+                OPTIONAL {?person ab:alamatPasien ?alamatPasien .}
+                OPTIONAL {?person ab:role ?role .}
+                FILTER (?role='pasien')
+                FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
+                FILTER regex (?namaPasien, \"{$namaPasien}\", \"i\")
+            }"
+        );
+        return $result;
+    }
+
+    function searchKunjungan ($idKunjungan, $tglKunjungan, $diagnosis)
+    {
+        $sparql = new \EasyRdf\Sparql\Client('http://localhost:3030/puskesmasgo/query');
+
+        $result = $sparql->query(
+            "PREFIX ab: <http://learningsparql.com/ns/addressbook#> 
+            PREFIX d:  <http://learningsparql.com/ns/data#> 
+            
+            SELECT DISTINCT ?idKunjungan ?idDokter ?namaDokter ?idPasien ?namaPasien ?tglKunjungan ?anemnesa ?diagnosis ?tindakan ?obat
+            WHERE {
+              OPTIONAL {?kunjungan ab:idKunjungan ?idKunjungan .}
+              OPTIONAL {?kunjungan ab:tglKunjungan ?tglKunjungan .}
+              OPTIONAL {?kunjungan ab:anemnesa ?anemnesa .}
+              OPTIONAL {?kunjungan ab:diagnosis ?diagnosis .}
+              OPTIONAL {?kunjungan ab:tindakan ?tindakan .}
+              OPTIONAL {?kunjungan ab:obat ?obat .} 
+              ?kunjungan ab:KunjunganDokter ?kd .
+              ?kunjungan ab:KunjunganPasien ?kp .
+              OPTIONAL {?kd ab:idDokter ?idDokter .}
+              OPTIONAL {?kd ab:namaDokter ?namaDokter .}
+              OPTIONAL {?kp ab:idPasien ?idPasien.}
+              OPTIONAL {?kp ab:namaPasien ?namaPasien .}
+              FILTER regex (?idKunjungan, \"{$idKunjungan}\", \"i\")
+              FILTER regex (?tglKunjungan, \"{$tglKunjungan}\", \"i\")
+              FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
+            }"
+        );
+        return $result;
+    }
 }

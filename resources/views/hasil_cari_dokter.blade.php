@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Data Dokter</title>
+    <title>Hasil Pencarian Dokter</title>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,18 +27,21 @@
 
         <div class="section-doctor">
             <div class="container-navbar">
-                <h1 class="darkcolor">Data Dokter</h1>
+                <h1>Hasil Pencarian Dokter</h1>
                 <div class="card-content">
                     <div class="row">
-                        @foreach ($dataAll as $data)
-                        <?php dd($data) ?>
+                        @forelse ($search as $s)
                         <div class="col-3">
                             <div class="card">
-                                <img src="{{ $data->gambar }}" alt="">
-                                <a href="/dokter/{{ $data->idDokter }}" class="doc-name">{{ $data->namaDokter }}</a>
+                                <img src="{{ $s->gambar }}" alt="">
+                                <a href="/dokter/{{ $s->idDokter }}" class="doc-name">{{ $s->namaDokter }}</a>
                             </div>
-                        </div> 
-                        @endforeach
+                        </div>
+                        @empty
+                        <div class="col-12">
+                            <h4 class="text-center">Dokter tidak ditemukan!</h4>
+                        </div>
+                        @endforelse
                     </div>
                 </div>
             </div>

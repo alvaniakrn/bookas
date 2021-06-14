@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Data Dokter</title>
+    <title>Hasil Pencarian Pasien</title>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,18 +27,39 @@
 
         <div class="section-doctor">
             <div class="container-navbar">
-                <h1 class="darkcolor">Data Dokter</h1>
+                <h1>Hasil Pencarian Pasien</h1>
                 <div class="card-content">
                     <div class="row">
-                        @foreach ($dataAll as $data)
-                        <?php dd($data) ?>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="{{ $data->gambar }}" alt="">
-                                <a href="/dokter/{{ $data->idDokter }}" class="doc-name">{{ $data->namaDokter }}</a>
-                            </div>
-                        </div> 
-                        @endforeach
+                        <div class="col-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pasien_ID</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Tanggal Lahir</th>
+                                        <th scope="col">No. Telp</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Detail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($search as $s)
+                                        <tr>
+                                            <th scope="row">{{ $s->idPasien }}</th>
+                                            <td>{{ $s->namaPasien }}</td>
+                                            <td>{{ $s->tglLahirPasien }}</td>
+                                            <td>{{ $s->noTelpPasien }}</td>
+                                            <td>{{ $s->alamatPasien }}</td>
+                                            <td><a href="/pasien/{{ $s->idPasien }}">See More</a></td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Pasien tidak ditemukan!</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

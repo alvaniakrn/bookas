@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Data Dokter</title>
+    <title>Cari Kunjungan</title>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,20 +27,29 @@
 
         <div class="section-doctor">
             <div class="container-navbar">
-                <h1 class="darkcolor">Data Dokter</h1>
-                <div class="card-content">
-                    <div class="row">
-                        @foreach ($dataAll as $data)
-                        <?php dd($data) ?>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="{{ $data->gambar }}" alt="">
-                                <a href="/dokter/{{ $data->idDokter }}" class="doc-name">{{ $data->namaDokter }}</a>
-                            </div>
-                        </div> 
-                        @endforeach
+                <h1>Pencarian Kunjungan Lanjut</h1>
+                <form method="POST" action="/cari-kunjungan">
+                    @csrf
+                    <div class="form-group row">
+                      <label for="idKunjungan" class="col-sm-2 col-form-label">ID Kunjungan</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="idKunjungan" class="form-control" id="idKunjungan" placeholder="ID Kunjungan">
+                      </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                      <label for="tglKunjungan" class="col-sm-2 col-form-label">Tanggal Kunjungan</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="tglKunjungan" class="form-control" id="tglKunjungan" placeholder="MMM DD, YYYY">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="diagnosis" class="col-sm-2 col-form-label">Diagnosis</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="diagnosis" class="form-control" id="diagnosis" placeholder="Diagnosis">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                </form>
             </div>
         </div>
     </div>
