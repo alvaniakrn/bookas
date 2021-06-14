@@ -54,7 +54,8 @@ class Sparql extends Model
                 FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
                 FILTER regex (?namaDokter, \"{$namaDokter}\", \"i\")
                 FILTER regex (?spesialis, \"{$spesialis}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idDokter)"
         );
         return $result;
     }
@@ -94,7 +95,8 @@ class Sparql extends Model
                 FILTER (?role='pasien')
                 FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
                 FILTER regex (?namaPasien, \"{$namaPasien}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idPasien)"
         );
         return $result;
     }
@@ -169,7 +171,8 @@ class Sparql extends Model
               FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
               FILTER regex (?tindakan, \"{$tindakan}\", \"i\")
               FILTER regex (?obat, \"{$obat}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idKunjungan)"
         );
         return $result;
     }
@@ -193,7 +196,8 @@ class Sparql extends Model
                 FILTER regex (?idDokter, \"{$idDokter}\", \"i\")
                 FILTER regex (?namaDokter, \"{$namaDokter}\", \"i\")
                 FILTER regex (?spesialis, \"{$spesialis}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idDokter)"
         );
         return $result;
     }
@@ -217,7 +221,8 @@ class Sparql extends Model
                 FILTER (?role='pasien')
                 FILTER regex (?idPasien, \"{$idPasien}\", \"i\")
                 FILTER regex (?namaPasien, \"{$namaPasien}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idPasien)"
         );
         return $result;
     }
@@ -247,7 +252,8 @@ class Sparql extends Model
               FILTER regex (?idKunjungan, \"{$idKunjungan}\", \"i\")
               FILTER regex (?tglKunjungan, \"{$tglKunjungan}\", \"i\")
               FILTER regex (?diagnosis, \"{$diagnosis}\", \"i\")
-            }"
+            }
+            ORDER BY ASC(?idKunjungan)"
         );
         return $result;
     }

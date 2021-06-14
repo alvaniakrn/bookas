@@ -43,7 +43,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                        <label for="tglLahirPasien" class="col-sm-2 col-form-label">tglLahirPasien</label>
+                        <label for="tglLahirPasien" class="col-sm-2 col-form-label">Tanggal Lahir Pasien</label>
                         <div class="col-sm-10">
                           <input type="text" name="tglLahirPasien" class="form-control" id="tglLahirPasien" placeholder="MMM DD, YYYY">
                         </div>

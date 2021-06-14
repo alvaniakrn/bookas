@@ -31,7 +31,6 @@
                 <div class="card-content">
                     <div class="row">
                         @foreach ($dataAll as $data)
-                        <?php dd($data) ?>
                         <div class="col-3">
                             <div class="card">
                                 <img src="{{ $data->gambar }}" alt="">
