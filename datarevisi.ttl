@@ -1,0 +1,1072 @@
+@prefix ab: <http://learningsparql.com/ns/addressbook#> .
+@prefix d:  <http://learningsparql.com/ns/ab#> .
+
+####################Dokter
+
+d:D0001 ab:role "dokter" ;
+        ab:idDokter "D0001" ; 
+        ab:namaDokter "dr. Deacon Trujillo" ; 
+        ab:noTelpDokter "088807359106" ;
+        ab:spesialis "Gigi" ;
+        ab:pendidikan "S2 UI Kedokteran" ;
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00" ;
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0002 ab:role "dokter" ;
+        ab:idDokter "D0002" ; 
+        ab:namaDokter "dr. Sade Hyde" ; 
+        ab:noTelpDokter "088807359105" ;
+        ab:spesialis "Penyakit Dalam" ;
+        ab:pendidikan "S2 Kedokteran Unpad" ;
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00" ;
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0003 ab:role "dokter" ;
+        ab:idDokter "D0003" ; 
+        ab:namaDokter "dr. Derek Ayers" ; 
+        ab:noTelpDokter "088807359109" ;
+        ab:spesialis "Kulit dan Kelamin" ;
+        ab:pendidikan "S2 Kedokteran UGM" ;
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00" ;
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0004 ab:role "dokter" ;
+        ab:idDokter "D0004" ; 
+        ab:namaDokter "dr. Beatrice Spence" ; 
+        ab:noTelpDokter "08454832048" ;
+        ab:spesialis "Gigi" ;
+        ab:pendidikan "S2 UI Kedokteran" ;
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00" ;
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0005 ab:role "dokter" ;
+        ab:idDokter "D0005" ; 
+        ab:namaDokter "dr. Kennedy Drake" ; 
+        ab:noTelpDokter "087072960108" ;
+        ab:spesialis "Penyakit Dalam" ;
+        ab:pendidikan "S2 Kedokteran UNPAD" ;
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00" ;
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0006 ab:role "dokter";
+        ab:idDokter "D0006";
+        ab:namaDokter "dr. Donna Duncan";
+        ab:noTelpDokter "082582735106";
+        ab:spesialis "THT";
+        ab:pendidikan "S2 Kedokteran UNSYIAH";
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0007 ab:role "dokter" ;
+        ab:idDokter "D0007" ; 
+        ab:namaDokter "dr. Brittany Crosby";
+        ab:noTelpDokter "08668400380";
+        ab:spesialis "Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran UB";
+        ab:jadwal "Senin s.d. Rabu, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0008 ab:role "dokter" ;
+        ab:idDokter "D0008" ; 
+        ab:namaDokter "dr. Wade Pierce";
+        ab:noTelpDokter "086198001857";
+        ab:spesialis "Kulit dan Kelamin";
+        ab:pendidikan "S2 Kedokteran UI";
+        ab:jadwal "Selasa, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0009 ab:role "dokter" ;
+        ab:idDokter "D0009" ; 
+        ab:namaDokter "dr. Chelsea Shaw";
+        ab:noTelpDokter "085814570042";
+        ab:spesialis "Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran Unpad";
+        ab:jadwal "Rabu, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0010 ab:role "dokter" ;
+        ab:idDokter "D0010" ; 
+        ab:namaDokter "dr. Kylan Brown";
+        ab:noTelpDokter "081798196426";
+        ab:spesialis "Gigi";
+        ab:pendidikan "S2 Kedokteran UGM";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0011 ab:role "dokter" ;
+        ab:idDokter "D0011" ; 
+        ab:namaDokter "Moana M. Kidd, Sp.An";
+        ab:noTelpDokter "62 95 026 4091";
+        ab:spesialis "Anestesiologi";
+        ab:pendidikan "S2 Kedokteran UI";
+        ab:jadwal "Selasa, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0012 ab:role "dokter" ;
+        ab:idDokter "D0012" ; 
+        ab:namaDokter "Colette X. Brooks, Sp.An";
+        ab:noTelpDokter "62 86 182 8328";
+        ab:spesialis "Anestesiologi";
+        ab:pendidikan "S2 Kedokteran Unpad";
+        ab:jadwal "Rabu, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0013 ab:role "dokter" ;
+        ab:idDokter "D0013" ; 
+        ab:namaDokter "Ezekiel Q. Baldwin, Sp.B";
+        ab:noTelpDokter "62 29 001 0928";
+        ab:spesialis "Ilmu Bedah";
+        ab:pendidikan "S2 Kedokteran UGM";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0014 ab:role "dokter" ;
+        ab:idDokter "D0014" ; 
+        ab:namaDokter "Donna S. Wong, Sp.B";
+        ab:noTelpDokter "62 43 466 5404";
+        ab:spesialis "Ilmu Bedah";
+        ab:pendidikan "S2 Kedokteran UB";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0015 ab:role "dokter" ;
+        ab:idDokter "D0015" ; 
+        ab:namaDokter "Demetria D. Franco, Sp.PD";
+        ab:noTelpDokter "62 95 689 8553";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran Oxford";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0016 ab:role "dokter";
+        ab:idDokter "D0016";
+        ab:namaDokter "Vernon A. Cole, Sp.A";
+        ab:noTelpDokter "62 97 515 4292";
+        ab:spesialis "Ilmu Kesehatan Anak";
+        ab:pendidikan "S2 Kedokteran UNSYIAH ";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0017 ab:role "dokter" ;
+        ab:idDokter "D0017" ; 
+        ab:namaDokter "Wayne I. Carver, Sp.OG";
+        ab:noTelpDokter "62 46 890 9154";
+        ab:spesialis "Obstetri dan Ginekologi";
+        ab:pendidikan "S2 Kedokteran Trisakti";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0018 ab:role "dokter" ;
+        ab:idDokter "D0018" ; 
+        ab:namaDokter "Owen Y. Mcgee, Sp.N";
+        ab:noTelpDokter "62 32 164 2722";
+        ab:spesialis "Neurologi";
+        ab:pendidikan "S2 Kedokteran YARSI";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0019 ab:role "dokter" ;
+        ab:idDokter "D0019" ; 
+        ab:namaDokter "Dawn J. Meyers, Sp.KJ";
+        ab:noTelpDokter "62 35 399 2100";
+        ab:spesialis "Ilmu Kedokteran Jiwa";
+        ab:pendidikan "S2 Kedokteran UKI";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0020 ab:role "dokter" ;
+        ab:idDokter "D0020" ; 
+        ab:namaDokter "Upton U. Phillips, Sp.PD";
+        ab:noTelpDokter "62 67 623 9423";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran TARUMANEGARA";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0021 ab:role "dokter" ;
+        ab:idDokter "D0021" ; 
+        ab:namaDokter "Tyler X. Klein, Sp.An";
+        ab:noTelpDokter "62 75 385 0053";
+        ab:spesialis "Anestesiologi";
+        ab:pendidikan "S2 Kedokteran UI";
+        ab:jadwal "Selasa, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0022 ab:role "dokter" ;
+        ab:idDokter "D0022" ; 
+        ab:namaDokter "Chadwick C. Hester, Sp.THT";
+        ab:noTelpDokter "62 37 451 3599";
+        ab:spesialis "Ilmu Penyakit Telinga, Hidung dan Tenggorok";
+        ab:pendidikan "S2 Kedokteran Unpad";
+        ab:jadwal "Rabu, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0023 ab:role "dokter" ;
+        ab:idDokter "D0023" ; 
+        ab:namaDokter "Sigourney G. Sexton, Sp.THT";
+        ab:noTelpDokter "62 37 451 3599";
+        ab:spesialis "Ilmu Penyakit Telinga, Hidung dan Tenggorok";
+        ab:pendidikan "S2 Kedokteran UGM";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0024 ab:role "dokter" ;
+        ab:idDokter "D0024" ; 
+        ab:namaDokter "Jerry Q. Murray, Sp.THT";
+        ab:noTelpDokter "62 60 073 6886";
+        ab:spesialis "Ilmu Penyakit Telinga, Hidung dan Tenggorok";
+        ab:pendidikan "S2 Kedokteran UB";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0025 ab:role "dokter" ;
+        ab:idDokter "D0025" ; 
+        ab:namaDokter "Boris Q. Mcfarland, Sp.PD";
+        ab:noTelpDokter "62 80 682 3137";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran Oxford";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0026 ab:role "dokter";
+        ab:idDokter "D0026";
+        ab:namaDokter "Mia D. Langley, Sp.PD";
+        ab:noTelpDokter "62 12 560 6077";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran UNSYIAH ";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0027 ab:role "dokter" ;
+        ab:idDokter "D0027" ; 
+        ab:namaDokter "Jolie P. Castro, Sp.PD";
+        ab:noTelpDokter "62 90 989 3642";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran Trisakti";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0028 ab:role "dokter" ;
+        ab:idDokter "D0028" ; 
+        ab:namaDokter "Cadman R. Jimenez, Sp.PD";
+        ab:noTelpDokter "62 38 470 2976";
+        ab:spesialis "Ilmu Penyakit Dalam";
+        ab:pendidikan "S2 Kedokteran YARSI";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0029 ab:role "dokter" ;
+        ab:idDokter "D0029" ; 
+        ab:namaDokter "Margaret N. Tillman, Sp.A";
+        ab:noTelpDokter "62 27 162 2012";
+        ab:spesialis "Ilmu Kesehatan Anak";
+        ab:pendidikan "S2 Kedokteran UKI";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+d:D0030 ab:role "dokter" ;
+        ab:idDokter "D0030" ; 
+        ab:namaDokter "Hedwig P. Sims, Sp.A";
+        ab:noTelpDokter "62 28 674 3083";
+        ab:spesialis "Ilmu Kesehatan Anak";
+        ab:pendidikan "S2 Kedokteran UGM";
+        ab:jadwal " Kamis, 17.00 WIB s.d. 20.00";
+        ab:gambar "https://woop.sgp1.cdn.digitaloceanspaces.com/woop/storage/20191204/164010-dokter-perempuan-masih-mendapat-diskriminasi-webp-large.jpg" ;
+        .
+
+
+####################Pasien
+
+d:P0001 ab:role "pasien" ; 
+        ab:idPasien "P0001" ; 
+        ab:namaPasien "Prescott Garrett" ;
+        ab:tglLahirPasien "Jul 8, 1993" ;
+        ab:noTelpPasien "088610291644" ;
+        ab:alamatPasien "Jl. Imam Bonjol" ;
+        .
+
+d:P0002 ab:role "pasien" ; 
+        ab:idPasien "P0002" ; 
+        ab:namaPasien "Ezekiel Morris" ;
+        ab:tglLahirPasien "Mar 2, 1999" ;
+        ab:noTelpPasien "088450160885" ;
+        ab:alamatPasien "Jl. Mardinata" ;
+        .
+
+d:P0003 ab:role "pasien" ; 
+        ab:idPasien "P0003" ; 
+        ab:namaPasien "Diana Rios";
+        ab:tglLahirPasien "Feb 19, 2000";
+        ab:noTelpPasien "083842754680";
+        ab:alamatPasien "Jl. Kemanggisan";
+        .
+
+d:P0004 ab:role "pasien" ; 
+        ab:idPasien "P0004" ; 
+        ab:namaPasien "Bryar Dickerson";
+        ab:tglLahirPasien "Feb 19, 2000";
+        ab:noTelpPasien "083842754680";
+        ab:alamatPasien " Jl. Soekarno Hatta";
+        .
+
+d:P0005 ab:role "pasien" ; 
+        ab:idPasien "P0005" ; 
+        ab:namaPasien "Paula Prince";
+        ab:tglLahirPasien "Aug 9, 1991";
+        ab:noTelpPasien "081405269413";
+        ab:alamatPasien " Jl. Rambutan";
+        .
+
+d:P0006 ab:role "pasien" ; 
+        ab:idPasien "P0006" ; 
+        ab:namaPasien "Wade Reyes";
+        ab:tglLahirPasien "Mar 18, 2000";
+        ab:noTelpPasien "088610291644";
+        ab:alamatPasien " Jl. Imam Bonjol";
+        .
+
+d:P0007 ab:role "pasien" ; 
+        ab:idPasien "P0007" ; 
+        ab:namaPasien "Zahir Silva";
+        ab:tglLahirPasien "Feb 21, 1994";
+        ab:noTelpPasien "080547534892";
+        ab:alamatPasien " Jl. Soekarno Hatta";
+        .
+
+d:P0008 ab:role "pasien" ; 
+        ab:idPasien "P0008" ; 
+        ab:namaPasien "Hasad Roth";
+        ab:tglLahirPasien "Sep 29, 1998";
+        ab:noTelpPasien"080490402975";
+        ab:alamatPasien "  Jl. Rambutan";
+        .
+
+d:P0009 ab:role "pasien" ; 
+        ab:idPasien "P0009" ; 
+        ab:namaPasien "Ivan Stout";
+        ab:tglLahirPasien "Nov 24, 1999";
+        ab:noTelpPasien"083212164043";
+        ab:alamatPasien " Jl. Imam Bonjol";
+        .
+
+d:P0010 ab:role "pasien" ; 
+        ab:idPasien "P0010" ; 
+        ab:namaPasien "Ishmael Andrews";
+        ab:tglLahirPasien "Nov 7, 1994";
+        ab:noTelpPasien "084731696086";
+        ab:alamatPasien " Jl. Mardinata";
+        .
+
+d:P0011 ab:role "pasien" ; 
+        ab:idPasien "P0011" ; 
+        ab:namaPasien "Labuh Prasetyo" ;
+        ab:tglLahirPasien "Aug 13, 1971" ;
+        ab:noTelpPasien "62 26 215 1569" ;
+        ab:alamatPasien "Jl. Raya Jatinangor" ;
+        .
+
+d:P0012 ab:role "pasien" ; 
+        ab:idPasien "P0012" ; 
+        ab:namaPasien "Gantar Sitompul" ;
+        ab:tglLahirPasien "Aug 18, 1960" ;
+        ab:noTelpPasien "62 83 800 5983" ;
+        ab:alamatPasien "756-3302 Semper Ave" ;
+        .
+
+d:P0013 ab:role "pasien" ; 
+        ab:idPasien "P0013" ; 
+        ab:namaPasien "Karen Oktaviani";
+        ab:tglLahirPasien "Oct 10, 1985";
+        ab:noTelpPasien "62 49 255 1196";
+        ab:alamatPasien "Ap #153-6522 Consequat Avenue";
+        .
+
+d:P0014 ab:role "pasien" ; 
+        ab:idPasien "P0014" ; 
+        ab:namaPasien "Shania Kusuma";
+        ab:tglLahirPasien "Nov 14, 1973";
+        ab:noTelpPasien "62 75 401 7845";
+        ab:alamatPasien "P.O. Box 139, 5018 Vel St.";
+        .
+
+d:P0015 ab:role "pasien" ; 
+        ab:idPasien "P0015" ; 
+        ab:namaPasien "Amalia Padmasari";
+        ab:tglLahirPasien "Apr 10, 1986";
+        ab:noTelpPasien "62 87 526 5079";
+        ab:alamatPasien "3391 Pellentesque Ave";
+        .
+
+d:P0016 ab:role "pasien" ; 
+        ab:idPasien "P0016" ; 
+        ab:namaPasien "Lukman Damanik";
+        ab:tglLahirPasien "Jul 29, 1989";
+        ab:noTelpPasien "62 36 869 3435";
+        ab:alamatPasien " 6576 Mus. Avenue";
+        .
+
+d:P0017 ab:role "pasien" ; 
+        ab:idPasien "P0017" ; 
+        ab:namaPasien "Cindy Wastuti";
+        ab:tglLahirPasien "Nov 25, 1960";
+        ab:noTelpPasien "62 77 827 4177";
+        ab:alamatPasien "4366 Viverra. Ave";
+        .
+
+d:P0018 ab:role "pasien" ; 
+        ab:idPasien "P0018" ; 
+        ab:namaPasien "Aris Rahardian";
+        ab:tglLahirPasien "Aug 12, 1999";
+        ab:noTelpPasien"62 74 494 8395";
+        ab:alamatPasien " 216 Velit Avenue";
+        .
+
+d:P0019 ab:role "pasien" ; 
+        ab:idPasien "P0019" ; 
+        ab:namaPasien "Drajat Firgantoro";
+        ab:tglLahirPasien "Nov 30, 1968";
+        ab:noTelpPasien"62 40 142 8892";
+        ab:alamatPasien "P.O. Box 140, 7816 Sem St.";
+        .
+
+d:P0020 ab:role "pasien" ; 
+        ab:idPasien "P0020" ; 
+        ab:namaPasien "Cawuk Gunarto";
+        ab:tglLahirPasien "Aug 13, 1995";
+        ab:noTelpPasien "62 78 889 5678";
+        ab:alamatPasien "P.O. Box 899, 7850 Nibh St.";
+        .
+
+d:P0021 ab:role "pasien" ; 
+        ab:idPasien "P0021" ; 
+        ab:namaPasien "Gatot Gunarto" ;
+        ab:tglLahirPasien "Mar 16, 2000" ;
+        ab:noTelpPasien "62 50 349 5506" ;
+        ab:alamatPasien "429-9806 Et, Rd." ;
+        .
+
+d:P0022 ab:role "pasien" ; 
+        ab:idPasien "P0022" ; 
+        ab:namaPasien "Asmianto Megantara" ;
+        ab:tglLahirPasien "Oct 6, 1974" ;
+        ab:noTelpPasien "62 93 163 9453" ;
+        ab:alamatPasien "7140 Sem, Rd." ;
+        .
+
+d:P0023 ab:role "pasien" ; 
+        ab:idPasien "P0023" ; 
+        ab:namaPasien "Sarah Astuti";
+        ab:tglLahirPasien "Jun 8, 2000";
+        ab:noTelpPasien "62 52 554 8999";
+        ab:alamatPasien "9477 Risus. Av.";
+        .
+
+d:P0024 ab:role "pasien" ; 
+        ab:idPasien "P0024" ; 
+        ab:namaPasien "Ratna Kusuma";
+        ab:tglLahirPasien "Feb 24, 1968";
+        ab:noTelpPasien "62 67 318 9178";
+        ab:alamatPasien "698-7367 Phasellus St.";
+        .
+
+d:P0025 ab:role "pasien" ; 
+        ab:idPasien "P0025" ; 
+        ab:namaPasien "Ghaliyati Maharani";
+        ab:tglLahirPasien "Jun 24, 1995";
+        ab:noTelpPasien "62 83 472 9804";
+        ab:alamatPasien "Ap #690-7066 Habitant Rd.";
+        .
+
+d:P0026 ab:role "pasien" ; 
+        ab:idPasien "P0026" ; 
+        ab:namaPasien "Tari Mayasari";
+        ab:tglLahirPasien "Jun 22, 1967";
+        ab:noTelpPasien "62 90 960 5383";
+        ab:alamatPasien "Ap #664-2953 Convallis St.";
+        .
+
+d:P0027 ab:role "pasien" ; 
+        ab:idPasien "P0027" ; 
+        ab:namaPasien "Tasdik Wijaya";
+        ab:tglLahirPasien "Aug 1, 1982";
+        ab:noTelpPasien "62 60 272 1181";
+        ab:alamatPasien "P.O. Box 918, 4218 Rutrum Avenue";
+        .
+
+d:P0028 ab:role "pasien" ; 
+        ab:idPasien "P0028" ; 
+        ab:namaPasien "Elvina Uyainah";
+        ab:tglLahirPasien "Aug 7, 1990";
+        ab:noTelpPasien "62 90 702 6541";
+        ab:alamatPasien "439-790 Et Street";
+        .
+
+d:P0029 ab:role "pasien" ; 
+        ab:idPasien "P0029" ; 
+        ab:namaPasien "Candra Irawan";
+        ab:tglLahirPasien "Jul 1, 1967";
+        ab:noTelpPasien "62 79 388 1065";
+        ab:alamatPasien "Ap #647-8967 In St.";
+        .
+
+d:P0030 ab:role "pasien" ; 
+        ab:idPasien "P0030" ; 
+        ab:namaPasien "Shakila Nathania";
+        ab:tglLahirPasien "Jul 23, 1965";
+        ab:noTelpPasien "62 20 789 3734";
+        ab:alamatPasien "Ap #722-9695 Turpis. Street";
+        .
+
+d:P0031 ab:role "pasien" ; 
+        ab:idPasien "P0031" ; 
+        ab:namaPasien "Baktiono Maheswara" ;
+        ab:tglLahirPasien "Jan 29, 1962" ;
+        ab:noTelpPasien "62 85 270 9659" ;
+        ab:alamatPasien "535-1606 Dolor Ave" ;
+        .
+
+d:P0032 ab:role "pasien" ; 
+        ab:idPasien "P0032" ; 
+        ab:namaPasien "Nabila Zahrah" ;
+        ab:tglLahirPasien "Sep 5, 1972" ;
+        ab:noTelpPasien "62 64 594 7230" ;
+        ab:alamatPasien "3640 Dignissim St." ;
+        .
+
+d:P0033 ab:role "pasien" ; 
+        ab:idPasien "P0033" ; 
+        ab:namaPasien "Bagus Hidayat";
+        ab:tglLahirPasien "Sep 18, 1991";
+        ab:noTelpPasien "62 14 771 1356";
+        ab:alamatPasien "Ap #538-7754 Convallis Street";
+        .
+
+d:P0034 ab:role "pasien" ; 
+        ab:idPasien "P0034" ; 
+        ab:namaPasien "Cager Situmorang";
+        ab:tglLahirPasien "Feb 28, 2004";
+        ab:noTelpPasien "62 76 300 0742";
+        ab:alamatPasien "Ap #543-4962 Tellus. St.";
+        .
+
+d:P0035 ab:role "pasien" ; 
+        ab:idPasien "P0035" ; 
+        ab:namaPasien "Aswani Mahardika";
+        ab:tglLahirPasien "Jun 24, 1974";
+        ab:noTelpPasien "62 27 582 1037";
+        ab:alamatPasien "Ap #597-8973 Praesent St.";
+        .
+
+d:P0036 ab:role "pasien" ; 
+        ab:idPasien "P0036" ; 
+        ab:namaPasien "Elvin Pradana";
+        ab:tglLahirPasien "May 15, 1973";
+        ab:noTelpPasien "62 46 037 6943";
+        ab:alamatPasien "479-4577 Risus. Road";
+        .
+
+d:P0037 ab:role "pasien" ; 
+        ab:idPasien "P0037" ; 
+        ab:namaPasien "Galuh Wacana";
+        ab:tglLahirPasien "Feb 27, 2008";
+        ab:noTelpPasien "62 23 893 8336";
+        ab:alamatPasien "Ap #196-5732 Quam Road";
+        .
+
+d:P0038 ab:role "pasien" ; 
+        ab:idPasien "P0038" ; 
+        ab:namaPasien "Ilsa Lestari";
+        ab:tglLahirPasien "Jun 27, 2006";
+        ab:noTelpPasien "62 85 801 6453";
+        ab:alamatPasien "Ap #477-9104 Mauris. Rd.";
+        .
+
+d:P0039 ab:role "pasien" ; 
+        ab:idPasien "P0039" ; 
+        ab:namaPasien "Baktiono Nugroho";
+        ab:tglLahirPasien "Apr 5, 1963";
+        ab:noTelpPasien "62 64 112 5633";
+        ab:alamatPasien "Ap #296-8252 Purus, Road";
+        .
+
+d:P0040 ab:role "pasien" ; 
+        ab:idPasien "P0040" ; 
+        ab:namaPasien "Kamaria Ananda";
+        ab:tglLahirPasien "Nov 30, 1988";
+        ab:noTelpPasien "62 84 017 3134";
+        ab:alamatPasien "9117 Lacus St.";
+        .
+
+
+
+####################DetailKunjungan
+
+d:K0001 ab:idKunjungan "K0001" ;
+       ab:tglKunjungan "Jan 13, 2020" ;
+       ab:anemnesa "Susah membuka mulut, pembengkakan gusi" ;
+       ab:diagnosis "Pertumbuhan gigi bungsu" ;
+       ab:tindakan "Operasi" ;
+       ab:obat"Cataflam" ;
+       .
+d:K0002 ab:idKunjungan "K0002" ;
+       ab:tglKunjungan "Feb 8, 2020" ;
+       ab:anemnesa "Bengkak pada rahang, susah makan" ;
+       ab:diagnosis "Pembengkakan gusi" ;
+       ab:tindakan "-" ;
+       ab:obat"Cataflam" ;
+       .
+
+d:K0003 ab:idKunjungan "K0003" ;
+        ab:tglKunjungan "Jan 30, 2017";
+        ab:anemnesa "Kesadaran menurun, Sesak napas";
+        ab:diagnosis "dbd";
+        ab:tindakan "-";
+        ab:obat "enervon-c, imboost";
+       .
+
+d:K0004 ab:idKunjungan "K0004" ;
+        ab:tglKunjungan "May 30, 2021";
+        ab:anemnesa "Kesadaran menurun, Sesak napas";
+        ab:diagnosis "anemia";
+        ab:tindakan "-";
+        ab:obat "enervon-c, imboost";
+       .
+
+d:K0005 ab:idKunjungan "K0005" ;
+       ab:tglKunjungan "Jul 19, 2019" ;
+       ab:anemnesa "Sakit pinggang, Nyeri ulu hati, Nyeri dada" ;
+       ab:diagnosis "bronkitis" ;
+       ab:tindakan "-" ;
+       ab:obat "Ibuprofen" ;
+       .
+
+d:K0006 ab:idKunjungan "K0006" ;
+       ab:tglKunjungan "Jul 28, 2016" ;
+       ab:anemnesa "Sakit pinggang, Nyeri ulu hati, Nyeri dada" ;
+       ab:diagnosis "bronkitis" ;
+       ab:tindakan "-" ;
+       ab:obat "Ibuprofen" ;
+       .
+
+d:K0007 ab:idKunjungan "K0007" ;
+       ab:tglKunjungan "Jan 18, 2020" ;
+       ab:anemnesa "Kesadaran menurun, Sesak napas, Batuk darah " ;
+       ab:diagnosis "anemia " ;
+       ab:tindakan "-" ;
+       ab:obat "sangobion" ;
+       .
+
+d:K0008 ab:idKunjungan "K0008" ;
+       ab:tglKunjungan "Feb 8, 2020" ;
+       ab:anemnesa "Kesadaran menurun, Sesak napas, Batuk darah " ;
+       ab:diagnosis "anemia " ;
+       ab:tindakan "-" ;
+       ab:obat "sangobion" ;
+       .
+
+d:K0009 ab:idKunjungan "K0009" ;
+       ab:tglKunjungan "Feb 17, 2019" ;
+       ab:anemnesa "Mencret, Sakit kepala, Kaku kuduk" ;
+       ab:diagnosis "mencret biasa" ;
+       ab:tindakan "-" ;
+       ab:obat "oralit" ;
+       .
+
+d:K0010 ab:idKunjungan "K0010" ;
+       ab:tglKunjungan "Oct 31, 2021" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0011 ab:idKunjungan "K0011" ;
+       ab:tglKunjungan "Jan 13, 2020" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "Operasi" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+d:K0012 ab:idKunjungan "K0012" ;
+       ab:tglKunjungan "Feb 8, 2020" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0013 ab:idKunjungan "K0013" ;
+        ab:tglKunjungan "May 8, 2020";
+        ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek";
+        ab:diagnosis "covid";
+        ab:tindakan "-";
+        ab:obat "enervon-c, imboost";
+       .
+
+d:K0014 ab:idKunjungan "K0014" ;
+        ab:tglKunjungan "Nov 12, 2020";
+        ab:anemnesa "Telinga sakit, pendengaran kurang";
+        ab:diagnosis "Radang telinga";
+        ab:tindakan "-";
+        ab:obat "Tarivid Ofloxacin";
+       .
+
+d:K0015 ab:idKunjungan "K0015" ;
+       ab:tglKunjungan "Sep 8, 2018" ;
+       ab:anemnesa "Pusing/hoyong, Badan tambah kurus, Badan lemah" ;
+       ab:diagnosis "tipes" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0016 ab:idKunjungan "K0016" ;
+       ab:tglKunjungan "Oct 21, 2018" ;
+       ab:anemnesa "Pusing/hoyong, Badan tambah kurus, Badan lemah" ;
+       ab:diagnosis "tipes" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0017 ab:idKunjungan "K0017" ;
+       ab:tglKunjungan "Jul 18, 2020" ;
+       ab:anemnesa "Pusing/hoyong, Badan tambah kurus, Badan lemah" ;
+       ab:diagnosis "tipes" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0018 ab:idKunjungan "K0018" ;
+       ab:tglKunjungan "Sep 21, 2021" ;
+       ab:anemnesa "Bengkak pada rahang, susah makan" ;
+       ab:diagnosis "Pembengkakan gusi" ;
+       ab:tindakan "-" ;
+       ab:obat "Cataflam" ;
+       .
+
+d:K0019 ab:idKunjungan "K0019" ;
+       ab:tglKunjungan "Feb 19, 2020" ;
+       ab:anemnesa "Kesadaran menurun, Sesak napas, Batuk darah " ;
+       ab:diagnosis "anemia " ;
+       ab:tindakan "-" ;
+       ab:obat "sangobion" ;
+       .
+
+d:K0020 ab:idKunjungan "K0020" ;
+       ab:tglKunjungan "Apr 30, 2018" ;
+       ab:anemnesa "Kesadaran menurun, Sesak napas, Batuk darah " ;
+       ab:diagnosis "anemia " ;
+       ab:tindakan "-" ;
+       ab:obat "sangobion" ;
+       .
+
+d:K0021 ab:idKunjungan "K0021" ;
+       ab:tglKunjungan "Aug 28, 2018" ;
+       ab:anemnesa "Nyeri ulu hati, Nyeri dada, Nyeri lutut" ;
+       ab:diagnosis "pneumonia" ;
+       ab:tindakan "X-ray" ;
+       ab:obat "levofloxacin" ;
+       .
+d:K0022 ab:idKunjungan "K0022" ;
+       ab:tglKunjungan "May 17, 2018" ;
+       ab:anemnesa "Nyeri ulu hati, Nyeri dada, Nyeri lutut" ;
+       ab:diagnosis "pneumonia" ;
+       ab:tindakan "-" ;
+       ab:obat "levofloxacin" ;
+       .
+
+d:K0023 ab:idKunjungan "K0023" ;
+        ab:tglKunjungan "Feb 7, 2018";
+        ab:anemnesa "Nyeri ulu hati, Nyeri dada, Nyeri lutut";
+        ab:diagnosis "pneumonia";
+        ab:tindakan "-";
+        ab:obat "levofloxacin";
+       .
+
+d:K0024 ab:idKunjungan "K0024" ;
+        ab:tglKunjungan "Feb 11, 2016";
+        ab:anemnesa "Nyeri ulu hati, Nyeri dada, Nyeri lutut";
+        ab:diagnosis "pneumonia";
+        ab:tindakan "-";
+        ab:obat "levofloxacin";
+       .
+
+d:K0025 ab:idKunjungan "K0025" ;
+       ab:tglKunjungan "Nov 24, 2020" ;
+       ab:anemnesa "Jantung berdebar-debar,  Sulit tidur,  Hidung tersumbat" ;
+       ab:diagnosis "jantung" ;
+       ab:tindakan "-" ;
+       ab:obat "Antikoagulan" ;
+       .
+
+d:K0026 ab:idKunjungan "K0026" ;
+       ab:tglKunjungan "Jun 24, 2021" ;
+       ab:anemnesa "Jantung berdebar-debar,  Sulit tidur,  Hidung tersumbat" ;
+       ab:diagnosis "jantung" ;
+       ab:tindakan "-" ;
+       ab:obat "Antikoagulan" ;
+       .
+
+d:K0027 ab:idKunjungan "K0027" ;
+       ab:tglKunjungan "Jul 5, 2016" ;
+       ab:anemnesa "Jantung berdebar-debar,  Sulit tidur,  Hidung tersumbat" ;
+       ab:diagnosis "jantung" ;
+       ab:tindakan "-" ;
+       ab:obat "Antikoagulan" ;
+       .
+
+d:K0028 ab:idKunjungan "K0028" ;
+       ab:tglKunjungan "Jan 9, 2020" ;
+       ab:anemnesa "Jantung berdebar-debar,  Sulit tidur,  Hidung tersumbat" ;
+       ab:diagnosis "jantung" ;
+       ab:tindakan "-" ;
+       ab:obat "Antikoagulan" ;
+       .
+
+d:K0029 ab:idKunjungan "K0029" ;
+       ab:tglKunjungan "May 29, 2018" ;
+       ab:anemnesa "Jantung berdebar-debar,  Sulit tidur,  Hidung tersumbat" ;
+       ab:diagnosis "jantung" ;
+       ab:tindakan "-" ;
+       ab:obat "Antikoagulan" ;
+       .
+
+d:K0030 ab:idKunjungan "K0030" ;
+       ab:tglKunjungan "Feb 8, 2020" ;
+       ab:anemnesa "Sakit pinggang, Nyeri ulu hati, Nyeri dada" ;
+       ab:diagnosis "bronkitis" ;
+       ab:tindakan "-" ;
+       ab:obat "Ibuprofen" ;
+       .
+
+d:K0031 ab:idKunjungan "K0031" ;
+       ab:tglKunjungan "Oct 9, 2017" ;
+       ab:anemnesa "Susah menalan, tenggorokan perih" ;
+       ab:diagnosis "Radang tenggorokan" ;
+       ab:tindakan "-" ;
+       ab:obat "Methylprednisol" ;
+       .
+d:K0032 ab:idKunjungan "K0032" ;
+       ab:tglKunjungan "Dec 17, 2017" ;
+       ab:anemnesa "Telinga sakit, pendengaran kurang" ;
+       ab:diagnosis "Radang telinga" ;
+       ab:tindakan "-" ;
+       ab:obat "Tarivid Ofloxacin" ;
+       .
+
+d:K0033 ab:idKunjungan "K0033" ;
+        ab:tglKunjungan "May 8, 2020";
+        ab:anemnesa "Susah menalan, tenggorokan perih";
+        ab:diagnosis "Radang tenggorokan";
+        ab:tindakan "-";
+        ab:obat "Methylprednisol";
+       .
+
+d:K0034 ab:idKunjungan "K0034" ;
+        ab:tglKunjungan "Nov 12, 2020";
+        ab:anemnesa "Telinga sakit, pendengaran kurang";
+        ab:diagnosis "Radang telinga";
+        ab:tindakan "-";
+        ab:obat "Tarivid Ofloxacin";
+       .
+
+d:K0035 ab:idKunjungan "K0035" ;
+       ab:tglKunjungan "May 29, 2018" ;
+       ab:anemnesa "Mencret, Sakit kepala, Kaku kuduk" ;
+       ab:diagnosis "mencret" ;
+       ab:tindakan "-" ;
+       ab:obat "diapet" ;
+       .
+
+d:K0036 ab:idKunjungan "K0036" ;
+       ab:tglKunjungan "Aug 14, 2020" ;
+       ab:anemnesa "Mencret, Sakit kepala, Kaku kuduk" ;
+       ab:diagnosis "mencret" ;
+       ab:tindakan "-" ;
+       ab:obat "diapet" ;
+       .
+
+d:K0037 ab:idKunjungan "K0037" ;
+       ab:tglKunjungan "Oct 16, 2021" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0038 ab:idKunjungan "K0038" ;
+       ab:tglKunjungan "Jan 4, 2020" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0039 ab:idKunjungan "K0039" ;
+       ab:tglKunjungan "Jun 22, 2020" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+d:K0040 ab:idKunjungan "K0040" ;
+       ab:tglKunjungan "Dec 1, 2019" ;
+       ab:anemnesa "Sakit tenggorokan, Sakit menelan, Pilek" ;
+       ab:diagnosis "covid" ;
+       ab:tindakan "-" ;
+       ab:obat "enervon-c, imboost" ;
+       .
+
+
+###############DaftarKunjungan
+
+d:K0001 ab:KunjunganDokter d:D0001 ;
+       ab:KunjunganPasien d:P0001 .
+
+d:K0002 ab:KunjunganDokter d:D0001 ;
+       ab:KunjunganPasien d:P0002 .
+
+d:K0003 ab:KunjunganDokter d:D0002 ;
+       ab:KunjunganPasien d:P0003 .
+
+d:K0004 ab:KunjunganDokter d:D0002 ;
+       ab:KunjunganPasien d:P0009 .
+
+d:K0005 ab:KunjunganDokter d:D0003 ;
+       ab:KunjunganPasien d:P0004 .
+
+d:K0006 ab:KunjunganDokter d:D0004 ;
+       ab:KunjunganPasien d:P0005 .
+
+d:K0007 ab:KunjunganDokter d:D0004 ;
+       ab:KunjunganPasien d:P0006 .
+
+d:K0008 ab:KunjunganDokter d:D0005 ;
+       ab:KunjunganPasien d:P0007 .
+
+d:K0009 ab:KunjunganDokter d:D0006 ;
+       ab:KunjunganPasien d:P0008 .
+
+d:K0010 ab:KunjunganDokter d:D0007 ;
+       ab:KunjunganPasien d:P0010 .
+
+d:K0011 ab:KunjunganDokter d:D0008 ;
+       ab:KunjunganPasien d:P0011 .
+
+d:K0012 ab:KunjunganDokter d:D0020 ;
+       ab:KunjunganPasien d:P0012 .
+
+d:K0013 ab:KunjunganDokter d:D0009 ;
+       ab:KunjunganPasien d:P0013 .
+
+d:K0014 ab:KunjunganDokter d:D0010 ;
+       ab:KunjunganPasien d:P0014 .
+
+d:K0015 ab:KunjunganDokter d:D0010 ;
+       ab:KunjunganPasien d:P0015 .
+
+d:K0016 ab:KunjunganDokter d:D0011 ;
+       ab:KunjunganPasien d:P0016 .
+
+d:K0017 ab:KunjunganDokter d:D0012 ;
+       ab:KunjunganPasien d:P0017 .
+
+d:K0018 ab:KunjunganDokter d:D0013 ;
+       ab:KunjunganPasien d:P0018 .
+
+d:K0019 ab:KunjunganDokter d:D0014 ;
+       ab:KunjunganPasien d:P0019 .
+
+d:K0020 ab:KunjunganDokter d:D0015 ;
+       ab:KunjunganPasien d:P0020 .
+
+d:K0021 ab:KunjunganDokter d:D0016 ;
+       ab:KunjunganPasien d:P0021 .
+
+d:K0022 ab:KunjunganDokter d:D0016 ;
+       ab:KunjunganPasien d:P0022 .
+
+d:K0023 ab:KunjunganDokter d:D0017 ;
+       ab:KunjunganPasien d:P0023 .
+
+d:K0024 ab:KunjunganDokter d:D0018 ;
+       ab:KunjunganPasien d:P0024 .
+
+d:K0025 ab:KunjunganDokter d:D0019 ;
+       ab:KunjunganPasien d:P0025 .
+
+d:K0026 ab:KunjunganDokter d:D0019 ;
+       ab:KunjunganPasien d:P0026 .
+
+d:K0027 ab:KunjunganDokter d:D0020 ;
+       ab:KunjunganPasien d:P0027 .
+
+d:K0028 ab:KunjunganDokter d:D0021 ;
+       ab:KunjunganPasien d:P0028 .
+
+d:K0029 ab:KunjunganDokter d:D0021 ;
+       ab:KunjunganPasien d:P0029 .
+
+d:K0030 ab:KunjunganDokter d:D0023 ;
+       ab:KunjunganPasien d:P0030 .
+
+d:K0031 ab:KunjunganDokter d:D0024 ;
+       ab:KunjunganPasien d:P0031 .
+
+d:K0032 ab:KunjunganDokter d:D0025 ;
+       ab:KunjunganPasien d:P0032 .
+
+d:K0033 ab:KunjunganDokter d:D0026 ;
+       ab:KunjunganPasien d:P0033 .
+
+d:K0034 ab:KunjunganDokter d:D0027 ;
+       ab:KunjunganPasien d:P0034 .
+
+d:K0035 ab:KunjunganDokter d:D0028 ;
+       ab:KunjunganPasien d:P0035 .
+
+d:K0036 ab:KunjunganDokter d:D0029 ;
+       ab:KunjunganPasien d:P0036 .
+
+d:K0037 ab:KunjunganDokter d:D0030 ;
+       ab:KunjunganPasien d:P0037 .
+
+d:K0038 ab:KunjunganDokter d:D0027 ;
+       ab:KunjunganPasien d:P0038 .
+
+d:K0039 ab:KunjunganDokter d:D0029 ;
+       ab:KunjunganPasien d:P0039 .
+
+d:K0040 ab:KunjunganDokter d:D0021 ;
+       ab:KunjunganPasien d:P0040 .
+
+
